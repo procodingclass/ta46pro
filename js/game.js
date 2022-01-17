@@ -31,16 +31,16 @@ class Game {
     bikes = [bike1, bike2, bike3, bike4];
 
     bike1.addImage(bike1img);
-    bike1.addImage("blast", blastImage);
+    
 
     bike2.addImage(bike2img);
-    bike2.addImage("blast", blastImage);
+    
 
     bike3.addImage(bike3img);
-    bike3.addImage("blast", blastImage);
+    
 
     bike4.addImage(bike4img);
-    bike4.addImage("blast", blastImage);
+    
   }
 
   play() {
@@ -62,20 +62,15 @@ class Game {
         bikes[index - 1].x = x;
         bikes[index - 1].y = y;
 
-        if (player.blast && player.index === index) {
-          bikes[index - 1].changeImage("blast");
-          bikes[index - 1].scale = 0.3;
-        }
-
-        if (keyIsDown(UP_ARROW) && !player.blast) {
+       if (keyIsDown(UP_ARROW) ) {
           bikes[index - 1].rotation = allplayers[p].rotation;
         }
 
-        if (keyIsDown(LEFT_ARROW) && !player.blast) {
+        if (keyIsDown(LEFT_ARROW)) {
           bikes[index - 1].rotation = allplayers[p].rotation;
         }
 
-        if (keyIsDown(RIGHT_ARROW) && !player.blast) {
+        if (keyIsDown(RIGHT_ARROW)) {
           bikes[index - 1].rotation = allplayers[p].rotation;
         }
 
