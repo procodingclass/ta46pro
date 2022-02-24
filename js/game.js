@@ -31,15 +31,16 @@ class Game {
     bikes = [bike1, bike2, bike3, bike4];
 
     bike1.addImage(bike1img);
-    
+    bike1.addImage("blast", blastImage);
 
     bike2.addImage(bike2img);
-    
+    bike2.addImage("blast", blastImage);
 
     bike3.addImage(bike3img);
-    
+    bike3.addImage("blast", blastImage);
 
     bike4.addImage(bike4img);
+    bike4.addImage("blast", blastImage);
     
   }
 
@@ -82,7 +83,7 @@ class Game {
           camera.position.x = width / 2;
           camera.position.y = bikes[index - 1].y;
         }
-
+       
 
       }
     }
